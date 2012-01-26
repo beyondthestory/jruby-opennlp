@@ -1,5 +1,5 @@
 module OpenNLP
-  module Tokenizer
+  class Tokenizer
     class Model
       attr_reader :j_tokenizer_model
 
