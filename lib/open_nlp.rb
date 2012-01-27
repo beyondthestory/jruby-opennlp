@@ -6,3 +6,4 @@ require 'open_nlp/tokenizer_model'
 require 'open_nlp/tokenizer'
 
 require 'open_nlp/sentence_model'
+require 'open_nlp/sentence_detector'
