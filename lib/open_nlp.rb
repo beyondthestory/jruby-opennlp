@@ -7,3 +7,5 @@ require 'open_nlp/tokenizer'
 
 require 'open_nlp/sentence_model'
 require 'open_nlp/sentence_detector'
+
+require 'open_nlp/named_entity_detector_model'
