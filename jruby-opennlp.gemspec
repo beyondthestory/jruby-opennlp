@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.summary      = "Jruby wrapper of OpenNLP"
   s.description  = "A JRuby wrapper for the Apache OpenNLP library"
   s.version      = OpenNLP::VERSION
-  s.license      = ["MIT"]
   s.platform     = 'java'
 
   s.files        = `git ls-files`.split("\n")
