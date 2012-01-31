@@ -19,4 +19,9 @@ module OpenNLP
     class Model
     end
   end
+
+  class Detokenizer
+    class Dictionary
+    end
+  end
 end
