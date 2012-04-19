@@ -16,9 +16,9 @@ describe "OpenNLP::POSTagger" do
   describe "pos tagging" do
     before { @pos_tagger = OpenNLP::POSTagger.new(fixture_pos_model) }
 
-    it "should detect no sentences in an empty string" do
-      tagged = @pos_tagger.tag("The red fox sleeps soundly.")
-      tagged.should == ["The", "red", "fox", "sleeps", "soundly", "."]
+    it "should tag parts of a provided document" do
+      tagged = @pos_tagger.tag("The quick brown fox jumps over the lazy dog.")
+      tagged.should == "The/DT quick/JJ brown/JJ fox/NN jumps/NNS over/IN the/DT lazy/JJ dog./NN"
     end
 
     it "should raise an ArgumentError for a non-string" do
