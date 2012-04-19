@@ -8,7 +8,7 @@ module OpenNLP
     end
 
     def tag(tokens)
-      @j_pos_tagger_me.tag(tokens.to_java(:String)).to_ary
+      @j_pos_tagger_me.tag(tokens.to_java(:String))
     end
   end
 end
