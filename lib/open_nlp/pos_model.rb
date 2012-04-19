@@ -7,11 +7,9 @@ module OpenNLP
         case model
         when java.io.FileInputStream
           @j_pos_model = Java::opennlp.tools.postag.POSModel.new(model)
-          #@j_pos_model = Java::opennlp.tools.tokenize.TokenizerModel.new(model)
         when String
           model_file = java.io.FileInputStream.new(model)
           @j_pos_model = Java::opennlp.tools.postag.POSModel.new(model)
-          #@j_pos_model = Java::opennlp.tools.tokenize.TokenizerModel.new(model_file)
         else
           raise ArgumentError, "Model must be either a string or a java.io.FileInputStream"
         end
