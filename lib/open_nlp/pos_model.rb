@@ -1,5 +1,5 @@
 module OpenNLP
-  class POS
+  class POSTagger
     class Model
       attr_reader :j_pos_model
 
