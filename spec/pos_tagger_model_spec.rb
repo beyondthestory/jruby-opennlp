@@ -5,14 +5,14 @@ describe "OpenNLP::POSTagger::Model" do
     it "should accept a string filename parameter" do
       postagger_model = OpenNLP::POSTagger::Model.new(model_file_name)
       postagger_model.should be_a(OpenNLP::POSTagger::Model)
-      postagger_model.j_tokenizer_model.should be_a(Java::opennlp.tools.postag.POSModel)
+      postagger_model.j_pos_model.should be_a(Java::opennlp.tools.postag.POSModel)
     end
 
     it "should accept a java.io.FileInputStream object" do
       file_input_stream = java.io.FileInputStream.new(model_file_name)
-      tokenizer_model = OpenNLP::POSTagger::Model.new(file_input_stream)
-      tokenizer_model.should be_a(OpenNLP::POSTagger::Model)
-      tokenizer_model.j_tokenizer_model.should be_a(Java::opennlp.tools.postag.POSModel)
+      postagger_model = OpenNLP::POSTagger::Model.new(file_input_stream)
+      postagger_model.should be_a(OpenNLP::POSTagger::Model)
+      postagger_model.j_pos_model.should be_a(Java::opennlp.tools.postag.POSModel)
     end
 
     it "should raise an argument error otherwise" do
