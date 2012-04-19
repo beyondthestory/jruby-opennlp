@@ -9,7 +9,7 @@ module OpenNLP
           @j_pos_model = Java::opennlp.tools.postag.POSModel.new(model)
         when String
           model_file = java.io.FileInputStream.new(model)
-          @j_pos_model = Java::opennlp.tools.postag.POSModel.new(model)
+          @j_pos_model = Java::opennlp.tools.postag.POSModel.new(model_file)
         else
           raise ArgumentError, "Model must be either a string or a java.io.FileInputStream"
         end
