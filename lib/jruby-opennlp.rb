@@ -12,6 +12,9 @@ if RUBY_PLATFORM =~ /java/
   require 'open_nlp/named_entity_detector_model'
   require 'open_nlp/named_entity_detector'
 
+  require 'open_nlp/pos_model'
+  require 'open_nlp/pos'
+
   require 'open_nlp/detokenizer_dictionary'
 else
   require 'open_nlp/mocks'
