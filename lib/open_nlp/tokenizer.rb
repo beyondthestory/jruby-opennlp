@@ -9,5 +9,9 @@ module OpenNLP
       raise ArgumentError, "str must be a String" unless str.is_a?(String)
       @j_tokenizer.tokenize(str).to_ary
     end
+
+    def token_probabilities
+      @j_tokenizer.getTokenProbabilities.to_a
+    end
   end
 end
