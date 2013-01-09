@@ -29,6 +29,22 @@ describe "OpenNLP::Tokenizer" do
       lambda { @tokenizer.tokenize(nil) }.should raise_error(ArgumentError)
     end
   end
+
+  context "getting token probabilities" do
+    before { @tokenizer = OpenNLP::Tokenizer.new(fixture_model) }
+
+    it "should return an empty array when tokenizing empty string" do
+      tokens = @tokenizer.tokenize("")
+      token_probs = @tokenizer.token_probabilities
+      token_probs.should == []
+    end
+
+    it "should return all 1.0s" do
+      tokens = @tokenizer.tokenize("Test Again")
+      token_probs = @tokenizer.token_probabilities
+      token_probs.should == [1.0, 1.0]
+    end
+  end
 end
 
 def fixture_model
